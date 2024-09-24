@@ -188,5 +188,5 @@ To run the Cypress tests:
 To run tests in headless mode:
 
 ```bash
-npx cypress open
+npx cypress run
 ```
