@@ -2,7 +2,7 @@ import { closeReleasePopUp } from "../../utils/closePopUp";
 
 Cypress.Commands.add("setRefreshToken", () => {
   const refreshToken = Cypress.env("refreshToken");
-  console.log("refreshToken",refreshToken)
+  console.log("refreshToken", refreshToken);
   if (refreshToken) {
     cy.setCookie("refreshToken", refreshToken);
   } else {

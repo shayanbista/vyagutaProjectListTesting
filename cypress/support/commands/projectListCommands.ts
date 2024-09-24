@@ -94,3 +94,7 @@ Cypress.Commands.add("closeReleasePopUp", (className: string) => {
 Cypress.Commands.add("removeAllOptionElements", () => {
   cy.get(".dropdown-select__indicator").last().click();
 });
+
+Cypress.Commands.add("elementClickHandler", (selector: string) => {
+  cy.get(selector).last().click();
+});

@@ -1,9 +1,9 @@
-
 # Vyaguta E2E Testing
 
 This README provides an overview of the end-to-end (e2e) testing setup for the Vyaguta project using Cypress.
 
 ## Table of Contents
+
 - [Project Structure](#project-structure)
 - [Test Files](#test-files)
 - [Pages](#pages)
@@ -43,21 +43,25 @@ cypress/
 ## Test Files
 
 ### vyagutaHighlights.cy.ts
+
 - Tests for the highlights page functionality.
 - Checks if the highlights page opens correctly.
 - Verifies the release note popup modal behavior.
 
 ### vyagutaLogin.cy.ts
+
 - Tests for the login process and dashboard access.
 - Verifies successful login and dashboard loading.
 
 ### vyagutaProjectlistPage.cy.ts
+
 - Tests for the project list page functionality.
 - Includes tests for search, filtering, and table display.
 - Verifies behavior with valid and invalid project names.
 - Tests reset functionality and dropdown filtering options.
 
 ### vyagutaProjectListPagination.cy.ts
+
 - Tests for pagination functionality on the project list page.
 - Verifies record selection and display.
 - Checks navigation through available pages and button states.
@@ -87,7 +91,6 @@ Some custom commands and utility functions are used throughout the tests.
 - `validateTableHeader()`: Checks the table headers.
 - `handlePaginationFilter()`: Manages pagination and filtering.
 - `navigateAndCheckAllPages()`: Navigates through all available pages and checks button states.
-
 
 ## Setting Up Cypress
 
@@ -154,16 +157,16 @@ To set up Cypress for this project, follow these steps:
    Create the `cypress.config.ts` file with the following content:
 
    ```typescript
-   import { defineConfig } from 'cypress'
+   import { defineConfig } from "cypress";
 
    export default defineConfig({
      e2e: {
        setupNodeEvents(on, config) {
          // implement node event listeners here
        },
-       specPattern: 'cypress/e2e/**/*.cy.ts',
+       specPattern: "cypress/e2e/**/*.cy.ts",
      },
-   })
+   });
    ```
 
 ## Running Tests
@@ -187,6 +190,3 @@ To run tests in headless mode:
 ```bash
 npx cypress open
 ```
-
-
-

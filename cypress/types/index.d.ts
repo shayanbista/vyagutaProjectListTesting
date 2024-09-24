@@ -17,5 +17,6 @@ declare namespace Cypress {
     navigateAndCheckAllPages(query: number): Chainable<Element>;
     getTotalPages(): Chainable<number>;
     handlePaginationFilter(): Chainable<void>;
+    elementClickHandler(selector: string): Chainable<void>;
   }
 }

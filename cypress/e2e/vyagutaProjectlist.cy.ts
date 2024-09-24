@@ -55,9 +55,11 @@ describe("Vyaguta  projectlist test", () => {
   it("should open the dropdown and select the first  elements", () => {
     vyagutaprojectListPage.closeReleaseNotePopup();
     vyagutaprojectListPage.searchByFilter();
-    cy.get(".dropdown-select__indicator").last().click();
+    vyagutaprojectListPage.elementClickHandler(".dropdown-select__indicator");
     vyagutaprojectListPage.searchByFilter();
-    cy.get('[role="listbox"] [role="option"]').last().click();
+    vyagutaprojectListPage.elementClickHandler(
+      '[role="listbox"] [role="option"]',
+    );
     vyagutaprojectListPage.clickButton("button", "Apply Filter");
     vyagutaprojectListPage.checkSearchedResultLength();
   });

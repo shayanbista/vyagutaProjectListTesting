@@ -25,7 +25,6 @@ class VyagutaprojectListPage {
   checkSearchedResultLength() {
     cy.checkSearchedResultLength();
   }
-
   checkEmptySearchResult() {
     cy.checkEmptySearchResult();
   }
@@ -40,6 +39,10 @@ class VyagutaprojectListPage {
 
   selectMoreFilterOption(index: number) {
     cy.moreFilterOption(index);
+  }
+
+  elementClickHandler(selector: string) {
+    cy.elementClickHandler(selector);
   }
 
   searchByFilter() {
